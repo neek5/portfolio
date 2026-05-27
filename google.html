@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niko | My Time at Google</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional page-specific styles */
+        body {
+            overflow: auto; /* Allow scrolling for this single page */
+        }
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            min-height: 100vh;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .content-image {
+            width: 100%;
+            border-radius: 4px;
+            margin: 2rem 0;
+            background: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-image.aspect-video {
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .content-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .aspect-video img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            object-fit: cover;
+        }
+        .placeholder-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #888;
+            font-family: var(--font-sans);
+        }
+        .page-title {
+            font-size: 2.5rem;
+            font-family: var(--font-sans);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .page-subtitle {
+            font-size: 1.2rem;
+            font-family: var(--font-mono);
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        .text-content p {
+            margin-bottom: 1.5rem;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+        .meta-label {
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+        h2 {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-family: var(--font-sans);
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .gallery .content-image {
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <a href="index.html" class="back-link action-link">← Back to Home</a>
+        
+        <h1 class="page-title">My Time at Google</h1>
+        <p class="page-subtitle">Cloud Architect Traineeship</p>
+        
+        <!-- Main Headshot -->
+        <div class="content-image aspect-video">
+            <img src="google-headshot.jpg" alt="Google Headshot" onerror="this.style.display='none'">
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-label">Timeline</div>
+            <div>Nov 2023 - Nov 2024 (12 Months)</div>
+            
+            <div class="meta-label">Role</div>
+            <div>Cloud Architect Trainee</div>
+            
+            <div class="meta-label">Tech Stack</div>
+            <div>Google Cloud Platform (GCP), AWS, Compute Engine, Vertex AI, Cloud Run, Apps Script, Gemini Pro 1.5, Workflow Optimization.</div>
+        </div>
+
+        <div class="text-content">
+            <h2>Overview</h2>
+            <p>
+                Taking a leap of faith after completing my diploma, I joined Google for a year-long traineeship that fundamentally shaped my career trajectory in cloud technology. Beginning with a rigorous three-month training program with Agilitics, I bridged the gap between theory and practice, ultimately earning my Google Professional Cloud Architect certification. 
+            </p>
+            <p>
+                Over the course of the year, I balanced cross-functional technical projects with personal milestones, including competing in two powerlifting meets and consuming an unquantifiable amount of the office's PPP coffee.
+            </p>
+
+            <h2>Key Technical Projects</h2>
+            
+            <h3>AWS to GCP Compute Cost Automation Tool</h3>
+            <p><strong>The Challenge:</strong> Customer Engineers (CEs) faced the highly manual, time-consuming task of comparing disparate cloud costs—akin to comparing grocery prices across stores with entirely different units, currencies, and languages.</p>
+            <p><strong>The Solution:</strong> I developed an automated tool to streamline the direct comparison of AWS and GCP compute costs.</p>
+            <p><strong>The Impact:</strong> This tool empowered CEs with instant instance mapping, which boosted productivity by saving 50-70% of their time and directly contributed to securing more customer deals. Furthermore, I enhanced data-driven decision-making by acquiring and deploying Apps Script for workflow optimization.</p>
+
+            <h3>GENnifer: AI-Powered Seasonal Color Analysis</h3>
+            <p><strong>The Challenge:</strong> Professional color analysis is often expensive and inaccessible. I wanted to actively expand my skillset by solving this real-world problem through a collaborative, machine-learning-driven project.</p>
+            <p><strong>The Solution:</strong> Partnering with a fellow intern, we built GENnifer. We leveraged Google's Gemini Pro 1.5 model and Vertex AI to analyze user selfies and extract personalized, dominant color palettes.</p>
+            <p><strong>The Impact:</strong> We successfully built and deployed the core analytical engine. Through this process, I gained invaluable, hands-on debugging experience when navigating environmental deployment challenges, specifically troubleshooting local versus Cloud Run executions for an experimental "drape" visualization feature.</p>
+        </div>
+        
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <div class="content-image aspect-video">
+                <img src="google-cert.jpg" alt="Certificate" onerror="this.style.display='none'">
+            </div>
+            <div class="content-image aspect-video">
+                <img src="google-stage.jpg" alt="Stage" onerror="this.style.display='none'">
+            </div>
+            <div class="content-image aspect-video">
+                <img src="google-group1.jpg" alt="Group 1" onerror="this.style.display='none'">
+            </div>
+            <div class="content-image aspect-video">
+                <img src="google-helloAI.png" alt="Hello AI Hackathon" onerror="this.style.display='none'">
+            </div>
+            <div class="content-image aspect-video">
+                <img src="google-welcome.jpg" alt="Welcome" onerror="this.style.display='none'">
+            </div>
+            <div class="content-image aspect-video">
+                <img src="trainee-games.jpeg" alt="Trainee Games" onerror="this.style.display='none'">
+            </div>
+            <div class="content-image aspect-video">
+                <img src="google-workshop.jpg" alt="Workshop" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
